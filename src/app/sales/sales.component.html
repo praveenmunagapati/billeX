@@ -28,7 +28,7 @@
   <div class="card-body">
     <div class="row">
       <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-info btn-sm align-end" data-toggle="modal" data-target="#myModal">Add recite</button>
+      <button type="button" class="btn btn-info btn-sm align-end" data-toggle="modal" data-target="#myModal" hidden-print>Add recite</button>
     </div>
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
@@ -123,5 +123,6 @@
       <div class="col">Total</div>
       <div class="col">100</div>
     </div>
+    <button class="btn btn-primary hidden-print" onclick="window.print()"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print</button>
 
   </div>
