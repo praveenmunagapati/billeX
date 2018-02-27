@@ -1,128 +1,129 @@
-<div class="card">
+<div class="card bg-secondary text-white">
   <div class="card-header">
     <div class="row">
       <div class="col">
-        <div class="col">
-          <label for="date">Date:
-            <input type="Date" class="form-control" id="date">
-          </label>
-          <div class="col"></div>
-        </div>
+        <label for="date">Date:
+          <input type="date" class="form-control" id="date">
+        </label>
       </div>
       <div class="col">
-        <div class="col">
-          <label for="patient">Patient Name :
-            <input type="password" class="form-control" id="patient">
-          </label>
-        </div>
+        <label for="patient">Patient Name :
+          <input type="text" class="form-control" id="patient">
+        </label>
       </div>
       <div class="col">
-        <div class="col">
-          <label for="doctor">Doctor Name :
-            <input type="text" class="form-control" id="doctor">
-          </label>
-        </div>
+        <label for="doctor">Doctor Name :</label>
+        <select class="form-control" id="doctor">
+          <option>Doctor A</option>
+          <option>Doctor B</option>
+          <option>Doctor C</option>
+          <option>Doctor D</option>
+          <option>Doctor E</option>
+        </select>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#myModal" style="padding:20px" hidden-print>Add Particulars</button>
       </div>
     </div>
   </div>
-  <div class="card-body">
-    <div class="row">
-      <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-info btn-sm align-end" data-toggle="modal" data-target="#myModal" hidden-print>Add recite</button>
-    </div>
-    <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-              <h4 class="modal-title">recite data</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            
-          </div>
-          <div class="modal-body">
-            
-              <form action="">
-                <div class="form-group">
-                  <label for="particular">particular:</label>
-                  <input type="text" class="form-control" id="particular">
-                </div>
-                <div class="form-group">
-                    <label for="bno">batch no :</label>
-                    <input type="text" class="form-control" id="bno">
-                  </div>
-                  <div class="form-group">
-                      <label for="expdate">expdate:</label>
-                      <input type="date" class="form-control" id="expdate">
-                    </div>
-                    <div class="form-group">
-                        <label for="price">price:</label>
-                        <input type="number" class="form-control" id="price">
-                      </div>
-                
-                <button type="submit" class="btn btn-default">Submit</button>
-              </form>
-
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
+  <div class="card-body bg-light text-dark">
+    <h2>Bill Information</h2>
     <div class="table-responsive">
-      <table class="table">
+      <table class="table table-hover">
         <thead>
           <tr>
-            <th>s.no</th>
-            <th>particulary</th>
-            <th>B.no</th>
-            <th>exp.date</th>
-            <th>Price</th>
+            <th>S.No</th>
+            <th>Product Name</th>
+            <th>Batch Number</th>
+            <th>Expiry Date</th>
+            <th>Quantity</th>
+            <th>Amount</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>1</td>
             <td>aspirin</td>
+            <td>1-1-2019</td>
+            <td>aspirin</td>
             <td>225</td>
             <td>1-1-2019</td>
-            <td>x09</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>GST %</td>
+            <td>
+              <input type="text" value="10" id="gst">
+            </td>
+            <td>Discount Rs.
+            </td>
+            <td>
+              <input type="text" id="discount" value="0">
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Total Rs.</td>
+            <td>
+              <input type="text" id="total">
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
-
-
   </div>
   <div class="card-footer">
+    <button type="reset" class="btn btn-dark float-right btn-primary-spacing">Reset</button>
+    <button type="submit" class="btn btn-success float-right btn-primary-spacing">Save Record</button>
+    <button class="btn btn-warning float-right btn-primary-spacing  hidden-print" onclick="window.print('.card-body')">
+      <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print Receipt</button>
+  </div>
 
-    <div class="row">
-      <div class="col"></div>
-      <div class="col"></div>
-      <div class="col">Gst</div>
-      <div class="col">15%</div>
-      <div class="col"></div>
-      <div class="col"></div>
-    </div>
-    <div class="row">
-      <div class="col"></div>
-      <div class="col"></div>
-      <div class="col">Dl.no</div>
-      <div class="col">25Xea.n</div>
-      <div class="col"></div>
-      <div class="col"></div>
 
-    </div>
-    <div class="row">
-      <div class="col"></div>
-      <div class="col"></div>
-      <div class="col">Total</div>
-      <div class="col">100</div>
-    </div>
-    <button class="btn btn-primary hidden-print" onclick="window.print()"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print</button>
 
+  <!-- Modal -->
+  <div id="myModal" class="modal text-dark fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Add Particulars Information</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="form-group">
+              <label for="particular">Product Name:</label>
+              <input type="text" class="form-control" id="productName">
+            </div>
+            <div class="form-group">
+              <label for="bno">Batch Number:</label>
+              <input type="text" class="form-control" id="batchNumber">
+            </div>
+            <div class="form-group">
+              <label for="expdate">Expiry Date:</label>
+              <input type="date" class="form-control" id="expiryDate">
+            </div>
+            <div class="form-group">
+              <label for="price">Quantity:</label>
+              <input type="number" class="form-control" id="quantity">
+            </div>
+            <div class="form-group">
+              <label for="price">Amount:</label>
+              <input type="number" class="form-control" id="amount">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success">Save</button>
+          <button type="submit" class="btn btn-warning">Add One More</button>
+          <button type="reset" class="btn btn-dark">Reset</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
