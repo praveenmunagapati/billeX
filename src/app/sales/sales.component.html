@@ -26,6 +26,53 @@
     </div>
   </div>
   <div class="card-body">
+    <div class="row">
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-info btn-sm align-end" data-toggle="modal" data-target="#myModal">Add recite</button>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+              <h4 class="modal-title">recite data</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            
+          </div>
+          <div class="modal-body">
+            
+              <form action="">
+                <div class="form-group">
+                  <label for="particular">particular:</label>
+                  <input type="text" class="form-control" id="particular">
+                </div>
+                <div class="form-group">
+                    <label for="bno">batch no :</label>
+                    <input type="text" class="form-control" id="bno">
+                  </div>
+                  <div class="form-group">
+                      <label for="expdate">expdate:</label>
+                      <input type="date" class="form-control" id="expdate">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">price:</label>
+                        <input type="number" class="form-control" id="price">
+                      </div>
+                
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
     <div class="table-responsive">
       <table class="table">
         <thead>
@@ -54,7 +101,27 @@
   <div class="card-footer">
 
     <div class="row">
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col">Gst</div>
+      <div class="col">15%</div>
+      <div class="col"></div>
+      <div class="col"></div>
+    </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col">Dl.no</div>
+      <div class="col">25Xea.n</div>
+      <div class="col"></div>
+      <div class="col"></div>
+
+    </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col"></div>
       <div class="col">Total</div>
       <div class="col">100</div>
     </div>
+
   </div>
